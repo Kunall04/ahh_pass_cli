@@ -36,7 +36,7 @@ program.command('get <site>')
        .description('get the password for the site')
        .action((site,username,password)=>{
               const vault=load();
-              
+
               if(!vault[site]) {
                      console.log(`no password found for ${site}`);
                      return;
@@ -46,4 +46,14 @@ program.command('get <site>')
               console.log(`Username: ${vault[site].username}`);
               console.log(`Password: ${vault[site].password}`);
        });
+
+
+program.command('list')
+       .description('get the password for the site')
+       .action((site,username,password)=>{
+              const vault=load();
+              
+              console.log(vault);
+       });
+
 program.parse(process.argv); 
