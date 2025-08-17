@@ -49,10 +49,12 @@ program.command('get <site>')
 
 
 program.command('list')
-       .description('get the password for the site')
+       .description('list all the items in the vault.json')
        .action((site,username,password)=>{
               const vault=load();
               
+              if(!vault) return ;
+
               console.log(vault);
        });
 
