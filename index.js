@@ -44,8 +44,10 @@ program.command('get <site>')
 
               console.log(`${site}:`);
               console.log(`Username: ${vault[site].username}`);
-              console.log(`Password: ${vault[site].password}`);
+              // console.log(`Password: ${vault[site].password}`);
        });
+       wleknflwenflw
+       lkefnlwks
 
 
 program.command('list')
